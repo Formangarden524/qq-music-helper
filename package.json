@@ -7,7 +7,7 @@
     "check": "node scripts/check.mjs",
     "build": "python3 scripts/package.py"
   },
-  "version": "0.3.0",
+  "version": "0.3.1",
   "description": "Chrome extension to capture playable QQ Music audio and save MP3 locally",
   "license": "UNLICENSED",
   "engines": {

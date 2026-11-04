@@ -2,7 +2,7 @@
 <html lang="zh-CN">
 <head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>QQ音乐 · 快捷保存</title><link rel="stylesheet" href="popup.css"></head>
 <body>
-  <header><div class="mark">♪</div><div><h1>QQ音乐 · 快捷保存</h1><p>复制链接，自动保存为 MP3。</p></div><span class="version">预览版 0.3</span></header>
+  <header><div class="mark">♪</div><div><h1>QQ音乐 · 快捷保存</h1><p>复制链接，自动保存为 MP3。</p></div><span class="version">预览版 0.3.1</span></header>
   <main>
     <div id="notice" role="status" aria-live="polite">正在检查剪贴板…</div>
     <label for="links">歌曲分享链接</label>
@@ -21,6 +21,12 @@
       <div class="actions"><button id="shortcuts">设置快捷键</button><button id="downloads">查看下载记录</button></div>
       <p>权限：读取你触发时的剪贴板、观察 QQ 音乐相关域名响应、保存文件、管理本工具任务。不会读取或导出 Cookie，也不会上传链接与下载记录。</p>
       <p>仅捕获当前网页可获取的普通音频；不处理加密容器或受保护流。文件已保存不代表已经核实为完整版。</p>
+    </details>
+    <details><summary>关于与来源致谢</summary>
+      <p><strong>萤火虫长命百岁俱乐部@秋哥</strong><br>认识生命，读懂身体，管理生活。</p>
+      <p>持续建设面向普通人的《生命说明书》，结合知识管理、工程思维与 AI 整理知识，也把日常学习和创作中的重复操作做成实用工具。</p>
+      <p>本工具起点来自使用 <a href="https://github.com/xifangczy/cat-catch" target="_blank" rel="noopener noreferrer">猫抓 cat-catch</a> 获取网页音频的实践。感谢作者 xifangczy。本扩展独立实现 QQ 音乐操作流程，未复制猫抓源码；MP3 编码使用随包的 lamejs。</p>
+      <p><a href="https://github.com/Formangarden524/qq-music-helper" target="_blank" rel="noopener noreferrer">项目主页与完整来源说明</a></p>
     </details>
   </main>
   <script type="module" src="popup.js"></script>

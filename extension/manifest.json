@@ -1,15 +1,52 @@
 {
   "manifest_version": 3,
   "name": "QQ音乐 · 快捷保存",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "minimum_chrome_version": "127",
   "description": "复制 QQ 音乐链接，一次触发网页播放、音频捕获与自动命名保存。",
-  "permissions": ["storage", "downloads", "webRequest", "alarms", "clipboardRead"],
-  "host_permissions": ["https://y.qq.com/*", "https://*.y.qq.com/*", "https://*.qqmusic.qq.com/*", "https://*.qqmusic.tc.qq.com/*"],
-  "background": {"service_worker":"background.js", "type":"module"},
-  "action": {"default_popup":"popup.html", "default_title":"读取 QQ 音乐链接并保存"},
-  "commands": {
-    "capture-clipboard": {"suggested_key":{"default":"Ctrl+Shift+8","mac":"Command+Shift+8"},"description":"从剪贴板启动 QQ 音乐保存","global":true}
+  "permissions": [
+    "storage",
+    "downloads",
+    "webRequest",
+    "alarms",
+    "clipboardRead"
+  ],
+  "host_permissions": [
+    "https://y.qq.com/*",
+    "https://*.y.qq.com/*",
+    "https://*.qqmusic.qq.com/*",
+    "https://*.qqmusic.tc.qq.com/*"
+  ],
+  "background": {
+    "service_worker": "background.js",
+    "type": "module"
   },
-  "content_scripts": [{"matches":["https://y.qq.com/*","https://*.y.qq.com/*"],"js":["metadata.js","content.js"],"run_at":"document_start"}]
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "读取 QQ 音乐链接并保存"
+  },
+  "commands": {
+    "capture-clipboard": {
+      "suggested_key": {
+        "default": "Ctrl+Shift+8",
+        "mac": "Command+Shift+8"
+      },
+      "description": "从剪贴板启动 QQ 音乐保存",
+      "global": true
+    }
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://y.qq.com/*",
+        "https://*.y.qq.com/*"
+      ],
+      "js": [
+        "metadata.js",
+        "content.js"
+      ],
+      "run_at": "document_start"
+    }
+  ],
+  "author": "萤火虫长命百岁俱乐部@秋哥"
 }
