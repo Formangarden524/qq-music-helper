@@ -1,0 +1,8 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>保存位置 · QQ音乐快捷保存</title><link rel="stylesheet" href="popup.css"></head>
+<body><header><div class="mark">♪</div><div><h1>选择保存位置</h1><p>选一次文件夹，之后自动保存到这里。</p></div></header>
+<main><div id="notice" role="status">正在读取设置…</div>
+<section class="job"><h2>指定文件夹</h2><p id="destination">尚未选择</p><button id="choose" class="primary">选择保存文件夹…</button><p class="hint">将打开系统文件夹选择窗口。请选一个专门存放音乐的文件夹，并允许写入。Chrome 出于隐私只提供文件夹名称，不提供完整路径。</p></section>
+<section class="job"><h2>或者使用浏览器下载目录</h2><label for="folder">下载目录下的子文件夹名称</label><input id="folder" value="QQ音乐" maxlength="60"><div class="actions"><button id="useDownloads">使用此下载目录</button></div></section>
+<p class="hint">选择自定义文件夹后，文件会直接写入该目录，不经过 Chrome 下载列表。若授权失效，保存页会提示你点击“授权并继续”，不会悄悄换到其他位置。设置只影响之后开始保存的任务；同名文件自动编号。</p>
+</main><script type="module" src="settings.js"></script></body></html>

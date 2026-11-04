@@ -1,0 +1,16 @@
+{
+  "name": "qq-music-helper",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "node --test",
+    "check": "node scripts/check.mjs",
+    "build": "python3 scripts/package.py"
+  },
+  "version": "0.3.0",
+  "description": "Chrome extension to capture playable QQ Music audio and save MP3 locally",
+  "license": "UNLICENSED",
+  "engines": {
+    "node": ">=22"
+  }
+}

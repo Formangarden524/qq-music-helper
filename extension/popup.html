@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="zh-CN">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>QQ音乐 · 快捷保存</title><link rel="stylesheet" href="popup.css"></head>
+<body>
+  <header><div class="mark">♪</div><div><h1>QQ音乐 · 快捷保存</h1><p>复制链接，自动保存为 MP3。</p></div><span class="version">预览版 0.3</span></header>
+  <main>
+    <div id="notice" role="status" aria-live="polite">正在检查剪贴板…</div>
+    <label for="links">歌曲分享链接</label>
+    <textarea id="links" rows="3" placeholder="粘贴 QQ 音乐链接，也支持带文字的分享内容。每行一首，最多 10 首。"></textarea>
+    <div class="actions"><button id="start" class="primary">开始保存</button><button id="paste">读取剪贴板</button><button id="sample" class="text">填入《女将》示例</button></div>
+    <div class="hint">点击扩展或快捷键打开时，会尝试读取并处理剪贴板中的 QQ 音乐链接。不会持续监听剪贴板。</div>
+    <section class="queue"><div class="section-title"><h2>保存任务</h2><button id="clear" class="text">清除已结束记录</button></div><div id="jobs"></div></section>
+    <details><summary>保存设置与使用帮助</summary>
+      <label>保存位置</label><div id="destination" class="filename">正在读取…</div><div class="actions"><button id="chooseFolder">选择保存文件夹…</button></div>
+      <div id="downloadFolder"><label for="folder">浏览器下载目录下的子文件夹名称</label><input id="folder" value="QQ音乐" maxlength="60"></div>
+      <label class="check"><input id="autoSave" type="checkbox" checked>捕获后自动保存</label>
+      <button id="settings">保存设置</button>
+      <p>文件命名：歌名－歌手.mp3。原音频是 MP3 时直接保存；AAC、M4A 等在本机真正转码为 MP3。同名文件由 Chrome 自动编号。</p>
+      <p>首次或登录过期时，请在歌曲网页登录。自动播放被拦截时，在歌曲页点一次“播放”；本工具会继续捕获。不会自动安装客户端。</p>
+      <p>按快捷键后没反应，可在 Chrome 的扩展快捷键页设置“从剪贴板启动 QQ 音乐保存”，并检查是否允许全局使用。</p>
+      <div class="actions"><button id="shortcuts">设置快捷键</button><button id="downloads">查看下载记录</button></div>
+      <p>权限：读取你触发时的剪贴板、观察 QQ 音乐相关域名响应、保存文件、管理本工具任务。不会读取或导出 Cookie，也不会上传链接与下载记录。</p>
+      <p>仅捕获当前网页可获取的普通音频；不处理加密容器或受保护流。文件已保存不代表已经核实为完整版。</p>
+    </details>
+  </main>
+  <script type="module" src="popup.js"></script>
+</body></html>
